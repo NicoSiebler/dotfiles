@@ -1,0 +1,16 @@
+set constantshow
+set boldtext
+set nowrap
+set tabsize 4
+set morespace
+set casesensitive
+set smooth
+set historylog
+set locking
+set nonewlines
+set positionlog
+set tabstospaces
+unset backup
+
+bind ^Y redo main
+bind ^Z undo main

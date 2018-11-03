@@ -1,0 +1,62 @@
+function ssh_add_keys() {
+    for i in ~/.ssh/*.key; do
+        ssh-add -t 20800 "${i}"
+    done
+}
+
+function is_numeric() {
+    case "$1" in
+        [0-9] )
+            echo 0
+        ;;
+        * )
+            echo 1
+        ;;
+    esac
+}
+
+function install_system() {
+    while read line; do
+        brew install $line
+    done < "${HOME}/.brewlist"
+}
+
+function gowork() {
+    cd "${HOME}/Documents/work/"
+    cd $1
+}
+
+function golastgit() {
+    if [ -r "${HOME}/.git_last_dir" ]; then
+        cd $(cat "${HOME}/.git_last_dir" | strings)
+    fi
+}
+
+# Use directly on a fresh shell or switched window
+function golastpwd() {
+    if [ -r "${HOME}/.last_pwd" ]; then
+        cd $(cat "${HOME}/.last_pwd" | strings)
+    fi
+}
+
+function note_git_dir() {
+    test -n "${1}" && printf "${1}" > "${HOME}/.git_last_dir"
+}
+
+function note_pwd() {
+    pwd > "${HOME}/.last_pwd"
+}
+
+function search_git_dir() {
+    (
+    local _PATH_PART="."
+    for _PART in $(pwd | grep -o /) /; do
+        if [ -d "${_PATH_PART}/.git" ]; then
+            note_git_dir $(readlink -e ${_PATH_PART})
+        fi
+        _PATH_PART="${_PATH_PART}/.."
+    done
+    )
+}
+
+chpwd_functions=(${chpwd_functions[@]} "note_pwd" "search_git_dir")

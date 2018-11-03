@@ -1,0 +1,8 @@
+set ftp:list-options -a
+set prompt "\[\e[1;37m\]lftp\] \[\e[0;32m\]\h\] \w\] \[\e[1;37m\]>\[\e[0m\] "
+alias lat="ls -latrh"
+cache flush
+cache off
+set xfer:clobber
+set ftp:passive-mode on
+alias download "mirror -a"

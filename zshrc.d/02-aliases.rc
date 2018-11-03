@@ -1,0 +1,19 @@
+alias gpg="gpg2"
+alias ls="ls --color=auto"
+alias lat="ls -latrh"
+alias rsync="rsync --partial --verbose --progress"
+alias grep="grep --color=auto"
+alias ssh="cat ~/.ssh/config.d/*/config > ~/.ssh/config;\ssh"
+alias g="git st"
+
+# macOS
+alias update_system="brew update && brew upgrade"
+alias sus="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# Global
+alias -g 'G'='| grep '
+alias -g 'SSHPASS'=' -o ChallengeResponseAuthentication=yes -o PasswordAuthentication=yes -o PubkeyAuthentication=no'
+
+# Something else
+alias todo='$EDITOR ~/.todo'
+

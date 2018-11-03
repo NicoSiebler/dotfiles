@@ -1,0 +1,11 @@
+# Read files in order in .zshrc/*.rc, overwrite with .zshrc/*.rc.local
+setopt extendedglob
+if [ -d "${HOME}/.zshrc.d" ]; then
+    for _RC in ${HOME}/.zshrc.d/(*.rc|*.rc.local); do
+        source "${_RC}"
+    done
+fi
+
+if [ -r "${HOME}/.zshrc.local" ]; then
+    source "${HOME}/.zshrc.local"
+fi

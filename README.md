@@ -14,6 +14,7 @@
 * Few aliases and functions
 * vim with vim-plug and auto installer as default editor
 * Useful nano setup
+* Homebrew Brewfile
 
 ## Setup
 
@@ -31,10 +32,16 @@ mkdir -p ~/.dotfiles
 
 ### Backup your files
 
-I'm not responsible for any loss.
+I'm not responsible for any loss, check files to backup carefully first.
 
 ### Apply dotfiles for the first time
 `rcup -d .dotfiles -t dotfiles -x "README*.md README LICENSE LICENSE.md"`
+
+### Setup Homebrew
+
+Install [Homebrew](https://brew.sh/) packages:
+
+`cd && brew bundle`
 
 ## Overriding files
 
@@ -58,8 +65,3 @@ You can also setup these via local dotfiles:
 An issue of the following command will include the `.dotfiles-local` directory in the setup. They get precedence over `.dotfiles` files:
 
 `rcup -t dotfiles`
-
-## TODO
-
-* Brew Installer
-* Setup command

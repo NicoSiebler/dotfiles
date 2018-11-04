@@ -1,2 +1,3 @@
 EXCLUDES="README*.md README LICENSE LICENSE.md"
 DOTFILES_DIRS="$HOME/.dotfiles-local $HOME/.dotfiles"
+UNDOTTED="Brewfile"

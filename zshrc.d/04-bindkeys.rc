@@ -8,6 +8,12 @@ bindkey "^N" insert-last-word
 bindkey "^Q" push-line-or-edit
 
 # Productivity keys
+# Alt+Up
+bindkey -s '^[^[[A' "cd ..\n"
+# Alt+Left
+bindkey -s '^[^[[D' "pushd\n"
+# Alt+Right
+bindkey -s '^[^[[C' "popd\n"
 # Alt+Option+Left
 bindkey '^[[1;9D' backward-word
 # Alt+Option+Right
@@ -16,9 +22,5 @@ bindkey '^[[1;9C' forward-word
 bindkey -s '^[[1;9A' "golastpwd\n"
 # Alt+Option+Down
 bindkey -s '^[[1;9B' "golastgit\n"
-# Alt+Up
-bindkey -s '^[^[[A' "cd ..\n"
-# Alt+Left
-bindkey -s '^[^[[D' "pushd\n"
-# Alt+Right
-bindkey -s '^[^[[C' "popd\n"
+# Alt+T
+bindkey -s '\xe2\x80\xa0' "tmux attach\n"

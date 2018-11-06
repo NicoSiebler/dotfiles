@@ -53,7 +53,7 @@
 [init]
   templatedir = ~/.git_template
 [push]
-  default = matching
+  default = current
 [rerere]
   enabled = true
 [url "https://"]

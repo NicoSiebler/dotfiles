@@ -97,6 +97,9 @@ set diffopt+=vertical
 " Do not copy line numbers with a mouse selection
 set mouse+=a
 
+" Enable macvim to use the clipboard
+set clipboard=unnamed
+
 " Declare plugins here
 if filereadable($HOME . "/.vimrc.plugins")
   source ~/.vimrc.plugins

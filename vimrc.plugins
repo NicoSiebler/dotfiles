@@ -7,9 +7,21 @@ if filereadable($HOME . "/.vim/autoload/plug.vim")
   call plug#begin('~/.vim/plugged')
   Plug 'itchyny/lightline.vim'
   Plug 'scrooloose/nerdtree'
+  Plug 'matze/vim-move'
+  Plug 'dkarter/bullets.vim'
   call plug#end()
 endif
 
 " CTRL+O: Open NERDTree
 map <C-o> :NERDTreeToggle<CR>
 
+" Limit vim bullets to file types
+let g:bullets_enabled_file_types = [
+    \ 'markdown',
+    \ 'text',
+    \ 'gitcommit',
+    \ 'scratch'
+    \]
+
+" Use C- modifier for vim-move
+let g:move_key_modifier = 'C'

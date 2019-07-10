@@ -16,12 +16,12 @@ endif
 map <C-o> :NERDTreeToggle<CR>
 
 " Limit vim bullets to file types
-let g:bullets_enabled_file_types = [
-    \ 'markdown',
-    \ 'text',
-    \ 'gitcommit',
-    \ 'scratch'
-    \]
+" let g:bullets_enabled_file_types = [
+"    \ 'markdown',
+"    \ 'text',
+"    \ 'gitcommit',
+"    \ 'scratch'
+"    \]
 
 " Use C- modifier for vim-move
 let g:move_key_modifier = 'C'

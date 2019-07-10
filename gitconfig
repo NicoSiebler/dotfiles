@@ -46,8 +46,6 @@
   added = yellow
   changed = green
   untracked = cyan
-[merge]
-  ff = only
 [commit]
   template = ~/.gitmessage
 [init]
